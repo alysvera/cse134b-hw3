@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="icon" href="data:,">
+  
+  <script>
+    // placeholder script for analytics requirement
+  </script>
+
+  <style>
+    main {
+      border: 1px solid black;
+    }
+    /* custom element 1 styling */
+    my-card {
+      display: block;
+      border: 1px solid black;
+      padding: 10px;
+    }
+  </style>
+
+  <!-- custom element 2 -->
+  <script>
+    class HelloWorld extends HTMLElement {
+      connectedCallback() {
+        console.log("Hello World!");
+      }
+    }
+    customElements.define('hello-world', HelloWorld);
+  </script>
+</head>
+<body>
+  <!-- custom element instantiation -->
+  <hello-world></hello-world>
+
+  <header>
+    <h1>Alyssa Rivera</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="about.html">About</a> |
+      <a href="experiments.html">Experiments</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>welcome</h2>
+      <p>hi welcome to my site. i am testing <b>bold</b>, <i>italic</i>, <strong>strong</strong>, and <em>em</em> tags here.</p>
+      <div>
+        <span>some simple text in a span</span>
+      </div>
+      <br>
+      <noscript>
+        <p>javascript is currently turned off</p>
+      </noscript>
+    </section>
+
+    <section>
+      <h2>custom element test</h2>
+      <my-card>
+        <p>this is my custom card element</p>
+      </my-card>
+    </section>
+  </main>
+
+  <footer>
+    <p>2026 alyssa rivera</p>
+  </footer>
+</body>
+</html>
