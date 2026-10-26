@@ -1,0 +1,226 @@
+/* author: alyssa rivera */
+/* repo: https://github.com/alysvera/cse134b-hw3 */
+
+/* css variables */
+:root {
+    --color-pink: #db6fa5;
+    --color-green: #507957;
+    --color-bubble-pink: #fbe6f2;
+    --color-bubble-green: #dbe8e0;
+    --color-bg: #ffffff;
+    --font-bubbly: ui-rounded, "Comic Sans MS", "Chalkboard SE", system-ui, sans-serif;
+    --max-width: 800px;
+  }
+  
+  /* base body styles */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-bubbly);
+    color: #374151;
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem 1rem;
+  }
+  
+  /* layout container */
+  header, main, footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+  
+  /* heading hierarchy */
+  h1 {
+    font-size: 2.5rem;
+    color: var(--color-pink);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+    color: var(--color-green);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* card background */
+  section {
+    background-color: var(--color-bubble-pink);
+    border: 2px solid #fbcfe8;
+    border-radius: 20px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.08);
+  }
+  
+  /* dialog */
+  dialog,
+  dialog[open] {
+    position: static;
+    display: block;
+    inset: auto;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    background-color: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid rgba(251, 207, 232, 0.9);
+    border-radius: 20px;
+    padding: 0.85rem 1.25rem;
+    color: var(--color-pink);
+    box-shadow: 0 6px 16px rgba(236, 72, 153, 0.1);
+    font-weight: 600;
+  }
+  
+  dialog p {
+    margin: 0;
+  }
+  
+  /* custom card element with em padding */
+  my-card {
+    display: block;
+    background-color: var(--color-bubble-green);
+    border: 2px solid #4e5f4d;
+    border-radius: 24px;
+    padding: 1em 1.2em;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.08);
+  }
+  
+  /* navbox with pink squiggly wave line */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1.25rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8' viewBox='0 0 20 8'%3E%3Cpath d='M0 4 Q 5 0, 10 4 T 20 4' fill='none' stroke='%23fbcfe8' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: bottom;
+  }
+  
+  /* all nav links */
+  nav > a {
+    color: var(--color-green);
+    background-color: var(--color-bubble-green);
+    border: 2px solid #4e5f4d;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  /* grid layout for main content sections */
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  
+  /* styles form text input fields */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    max-width: 320px;
+    border: 2px solid #4e5f4d;
+    border-radius: 12px;
+    padding: 0.5rem 0.75rem;
+    font-family: inherit;
+    background-color: #ffffff;
+    margin-top: 0.25rem;
+  }
+  
+  /* form box container */
+  fieldset {
+    border: 2px solid #4e5f4d;
+    border-radius: 16px;
+    padding: 1rem 1.25rem;
+    background-color: #ffffff;
+    margin-top: 1rem;
+  }
+  
+  legend {
+    color: var(--color-green);
+    font-weight: 600;
+    padding: 0 0.5rem;
+  }
+  
+  /* button padding using em */
+  button, input[type="submit"] {
+    background-color: var(--color-pink);
+    color: #ffffff;
+    border: none;
+    padding: 0.5em 1.25em;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+  
+  /* styles text inside footer with green squiggly line */
+  footer p {
+    font-size: 0.95rem;
+    color: var(--color-green);
+    text-align: center;
+    padding-top: 1.25rem;
+    margin-top: 2rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8' viewBox='0 0 20 8'%3E%3Cpath d='M0 4 Q 5 0, 10 4 T 20 4' fill='none' stroke='%23a7f3d0' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: top;
+  }
+  
+  /* paragraph right after h2 */
+  h2 + p {
+    margin-top: 0.25rem;
+  }
+  
+  /* link styling and hover */
+  a {
+    color: var(--color-pink);
+  }
+  
+  a:hover, button:hover, input[type="submit"]:hover {
+    opacity: 0.85;
+  }
+  
+  /* visible focus ring for keyboard nav */
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus {
+    outline: 3px solid var(--color-pink);
+    outline-offset: 3px;
+  }
+  
+  /* mobile responsiveness */
+  @media (max-width: 640px) {
+    body {
+      padding: 1rem 0.75rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+    }
+  
+    nav > a {
+      text-align: center;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.35rem;
+    }
+  }
+  
